@@ -10,6 +10,7 @@ services:
     tty: true
     volumes:
       - ./parsedmarc/parsedmarc.ini:/etc/parsedmarc.ini:z
+      - ./parsedmarc/GeoLite2-Country.mmdb:/usr/share/GeoIP/GeoLite2-Country.mmdb:z
     restart: unless-stopped
     networks:
       - parsedmarc-network
